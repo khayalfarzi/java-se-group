@@ -28,7 +28,11 @@ public class DateTimeExample {
         System.out.println("Format : " + dateTime.format(formatter));
 
         LocalDateTime first = LocalDateTime.now();
-        Thread.sleep(5000);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         LocalDateTime second = LocalDateTime.now();
         ChronoUnit.SECONDS.between(first, second);
     }
