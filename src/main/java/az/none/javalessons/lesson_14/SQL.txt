@@ -1,0 +1,16 @@
+INSERT INTO q4.person (p_id, p_name, p_surname, p_age)
+VALUES (4, 'KHAYAL', 'FARZIYEV', 23);
+
+UPDATE q4.person
+SET p_age=24,
+    p_name='KHAYYAM',
+    p_surname='SADIQOV'
+WHERE p_id = 3;
+
+DELETE
+FROM q4.person
+WHERE p_id = 4;
+
+SELECT *
+FROM q4.person
+WHERE p_age > 21;
